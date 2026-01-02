@@ -1,0 +1,26 @@
+{
+  "name": "ai-bookmark",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "dotenv -e .env -- turbo run dev",
+    "lint": "turbo run lint",
+    "type-check": "turbo run type-check",
+    "db:generate": "dotenv -e .env -- pnpm --filter @ai-bookmark/db generate",
+    "db:migrate": "dotenv -e .env -- pnpm --filter @ai-bookmark/db migrate",
+    "db:push": "dotenv -e .env -- pnpm --filter @ai-bookmark/db push",
+    "db:studio": "dotenv -e .env -- pnpm --filter @ai-bookmark/db studio"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "@typescript-eslint/parser": "^8.18.0",
+    "eslint": "^9.17.0",
+    "prettier": "^3.4.2",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.2"
+  },
+  "packageManager": "pnpm@9.15.1",
+  "engines": {
+    "node": ">=20"
+  }
+}
